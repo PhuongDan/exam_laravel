@@ -21,6 +21,16 @@ public function AddStudents(){
         ]);
 }
 public function StudentAdd(Request $request){
+    $request->validate([
+        "name"=>"required",
+        "age"=>"required",
+        "address"=>"required",
+        "telephone"=>"required|min:10|max:20",
+    ],[
+        "required"=>"Vui lòng điền đầy đủ thông tin",
+        "min"=>"Phải nhập tối thiểu :min",
+        "max"=>"Nhập giá trị không vượt quá :max"
+    ]);
         Students::create([
             "name"=>$request->get("name"),
             "age"=>$request->get("age"),

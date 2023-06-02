@@ -14,18 +14,30 @@
     <div class="form-group">
         <label for="exampleFormControlInput1">Name</label>
         <input name="name" type="text"  class="form-control" placeholder="">
+        @error("name")
+        <p class="text-danger"><i>{{$message}}</i></p>
+        @enderror
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Age</label>
         <input name="age" type="number"  class="form-control" placeholder="">
+        @error("age")
+        <p class="text-danger"><i>{{$message}}</i></p>
+        @enderror
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Address</label>
         <input name="address" type="text"  class="form-control" placeholder="">
+        @error("address")
+        <p class="text-danger"><i>{{$message}}</i></p>
+        @enderror
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">Telephone</label>
         <input name="telephone" type="number"  class="form-control" placeholder="">
+        @error("telephone")
+        <p class="text-danger"><i>{{$message}}</i></p>
+        @enderror
     </div>
 
     <div class="form-group">
