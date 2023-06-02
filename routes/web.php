@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[\App\Http\Controllers\WedController::class,"Students"]);
 Route::get("/add",[\App\Http\Controllers\WedController::class,"AddStudents"]);
-Route::post("/add",[\App\Http\Controllers\AdminController::class,"StudentAdd"]);
+Route::post("/add",[\App\Http\Controllers\WedController::class,"StudentAdd"]);
 
 Auth::routes();
 
