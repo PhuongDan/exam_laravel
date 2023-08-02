@@ -15,7 +15,7 @@ class WedController extends Controller
         ]);
     }
 public function AddStudents(){
-        $students=Students::all();
+        $students = Students::all();
         return view("add",[
             "students"=>$students
         ]);
